@@ -1,0 +1,27 @@
+schema{
+    query:Query
+}
+
+type Mutation{
+	deleteTrain(trainId:Long):String
+}
+ 
+
+type Query{
+	addTrain(trainName:String,arrivalTime:String, arrivalDate:String, departureTime:String, departureDate:String,source:String,destination:String,duration:String):String
+    findAll:[TrainsDTO]
+    findById(trainId:Long):TrainsDTO
+    deleteTrain(trainId:Long):String
+}
+
+type TrainsDTO{
+    trainId:Long
+    trainName:String
+    arrivalDate:String
+    departureDate:String
+    arrivalTime:String
+    departureTime:String
+    source:String
+    destination:String
+    duration:String
+}

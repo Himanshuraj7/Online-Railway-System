@@ -1,0 +1,17 @@
+schema{
+    query:Query
+}
+
+type Query{
+	cancelBooking(bookingId:Long):String
+	addBooking(passengerName:String, passengerAddress:String, age:Long):String
+    findAll:[BookingDTO]
+    findById(bookingId:Long):BookingDTO
+}
+
+type BookingDTO{
+   bookingId:Long
+   passengerName:String
+   passengerAddress:String
+   age:Long
+}
